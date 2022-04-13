@@ -10,7 +10,7 @@
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
-
+from YukkiMusic.plugins.tools.queue import queue_markup
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
