@@ -8,7 +8,7 @@
 # All rights reserved.
 
 from pyrogram.types import InlineKeyboardButton
-
+from YukkiMusic.plugins.tools.queue import queue_markup
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -32,12 +32,7 @@ def track_markup(_, videoid, user_id, channel, fplay):
     return buttons
 
 
-def stream_markup(
-    _,
-    videoid,
-    played: Union[bool, int] = None,
-    dur: Union[bool, int] = None,
-):
+def stream_markup(_, videoid,):
     buttons = [
         [
             InlineKeyboardButton(
