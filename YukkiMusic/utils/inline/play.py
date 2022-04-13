@@ -36,6 +36,12 @@ def stream_markup(_, videoid):
     buttons = [
         [
             InlineKeyboardButton(
+                text=_["QU_B_2"].format(played, dur),
+                callback_data="GetTimer",
+            )
+        ],
+        [
+            InlineKeyboardButton(
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
